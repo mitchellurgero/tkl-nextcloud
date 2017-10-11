@@ -16,7 +16,7 @@ rm -f /usr/local/src/nextcloud*
 
 # tweak footer
 TEMPLATE=$WEBROOT/core/templates/layout.guest.php
-sed -i "s|<footer>.*|<footer><p class='info' style='width: auto \!important;'><a href='https://urgero.org/howto/linux/TKL-Nextcloud.md'>Nextcloud Appliance (Autobuild)(URGERO.ORG)</a> \&ndash; Powered by <a href='https://urgero.org/tkl.md'>TurnKey Linux/urgero.org</a></p></footer>|" $TEMPLATE
+sed -i "s|<footer>.*|<footer><p class='info' style='width: auto \!important;'><a href='https://urgero.org/howto/linux/TKL-Nextcloud.md'>Nextcloud Appliance (Autobuild)(URGERO.ORG)</a> \&ndash; Powered by <a href='https://turnkeylinux.org'>TurnKey Linux/urgero.org</a></p></footer>|" $TEMPLATE
 
 # configure apache
 a2dissite 000-default
@@ -54,3 +54,9 @@ service apache2 stop
 
 #password change in inithooks fails with the default 32M limit
 sed -i s/32M/128M/ /etc/php5/cli/php.ini
+
+#### UFW RULES
+ufw disable && ufw --force enable
+ufw allow 22
+ufw allow 80
+ufw allow 443
