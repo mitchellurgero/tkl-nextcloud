@@ -30,3 +30,8 @@ Credentials *(passwords set at first boot)*
 .. _Nextcloud: http://nextcloud.com/
 .. _TurnKey Core: https://www.turnkeylinux.org/core
 .. _Adminer: http://www.adminer.org
+
+-------
+
+This appliance was built using [TurnKey Linux](http://turnkeylinux.org) with their [TKLDev Appliance](https://www.turnkeylinux.org/tkldev) as well as their [TKLCore Appliance](https://www.turnkeylinux.org/core).
+
